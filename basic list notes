@@ -1,0 +1,13 @@
+List 
+
+stores the reference of the objects not the data itself
+Has array of different data types
+
+1. print('List basic DSA problems')
+
+print('Alternate list elements')
+
+n = int(input('Enter no of elements : '))
+li = [int(input()) for i in range(n)]
+
+print(li[::2])
