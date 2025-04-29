@@ -1,0 +1,7 @@
+Sliding window approach is common algorithmic approach to solve the problems related to subarrays and substrings.
+Example :
+Used to find the sum of continuous subarrays
+concepts include - one pointer(start) to other pointer(end).
+
+start - beginning of an array
+end - expands as per our requirements
