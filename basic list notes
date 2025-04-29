@@ -11,3 +11,14 @@ n = int(input('Enter no of elements : '))
 li = [int(input()) for i in range(n)]
 
 print(li[::2])
+
+2. Find the element in the unsorted list (using hashmap - dict)
+
+print('Find the element in an unsorted array..')
+
+n = int(input('Enter the no element : '))
+arr = [int(input()) for i in range(n)]
+target = int(input('Enter the target element : '))
+
+new_map = {val:idx for idx,val in enumerate(arr)}
+print(new_map.get(target,-1))
