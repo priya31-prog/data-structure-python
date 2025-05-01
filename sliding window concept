@@ -31,3 +31,29 @@ target = 10
 
 result = printSubArray(list_items,target)
 print(result)
+
+
+2. print('Find the maximum sum of subarray..')
+
+def printMaxSubArray(arr,k):
+    if len(arr) < k:
+        return -1
+        
+    #first sum
+    whole_sum = sum(arr[:k])
+    max_sum = whole_sum
+    
+    for i in range(k,len(arr)):
+        whole_sum = whole_sum - arr[i-k] + arr[i]
+        max_sum = max(max_sum,whole_sum)
+    
+        
+    return (max_sum)
+    
+    
+
+arr = [1,8,2,1,-1,4,1,2,2]
+k = 56
+
+result = printMaxSubArray(arr,k)
+print(result)
