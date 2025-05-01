@@ -5,3 +5,29 @@ concepts include - one pointer(start) to other pointer(end).
 
 start - beginning of an array
 end - expands as per our requirements
+
+1. Find the target value from the array and return their range of indexes
+
+print('Sliding window concepts..')
+
+def printSubArray(arr,target):
+    start =0
+    whole_sum =0 
+    
+    for i in range(len(arr)):
+        whole_sum += arr[i]
+        
+        while (whole_sum > target and start <= i):
+            whole_sum -= arr[start]
+            start +=1
+            
+        if whole_sum == target:
+            return (start,i)
+            
+    return -1
+
+list_items = [4,7,8,2,3,4]
+target = 10
+
+result = printSubArray(list_items,target)
+print(result)
